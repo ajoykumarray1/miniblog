@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div>
+        <div>
+            <h1>DashBoard / Update the Post</h1>
+        </div>
+        <div>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input class='btn btn-success' type="submit" value="ADD">
+                <a class="btn btn-danger" href="{% url "dashboard" %}">Cancel</a>
+            </form>
+        </div>
+        
+    </div>
+{% endblock content %}
